@@ -1,0 +1,440 @@
+body{
+
+	width:100%;
+	font-family: 'Quicksand', sans-serif;
+}
+/*header*/
+.header {
+ font-variant: small-caps;
+	font-weight:normal;
+}
+.header span {
+	letter-spacing:1px;
+	font-family:'Quicksand', sans-serif;
+	color:#97BD18;
+	font-size :50px;
+	
+}
+.header  #disabled {
+    cursor: default;
+    pointer-events: none;
+}
+/*navcontainer*/
+.navcontainer .row {
+    border-top: 1px solid gray;
+    margin-left:10px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.9);
+    width: 97%;
+}
+.navcontainer.row ul li a:hover{
+	border-top:2px soild white;
+}
+.navcontainer {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: #ffffff;
+    display: inline;
+    font-size: 16px;
+    font-variant: small-caps;
+    font-weight: normal;
+    position:relative;
+    text-decoration: none;
+    z-index: 5;
+    line-height:35px;
+    width:88%;
+}
+.navbar{
+	background-color: rgba(0,0,0,0.3);
+}
+.navcontainer ul
+{
+    border:none;
+    list-style-type: none;
+    padding: 0;
+    /*width: 65%;*/
+}
+.navcontainer ul li {
+	display: inline; 
+}
+.navcontainer ul li a
+{
+	text-decoration: none;
+	padding: .2em 1em;
+	color:gray;
+}
+.navcontainer ul li a:hover
+{	
+	color:white;
+	border-top:1px soild green;
+}
+.navcontainer ul li.active a{
+	color:white;
+}
+.navcontainer ul li.drop-down ul li a:hover{
+	color:green;
+	box-shadow: 0 2px 4px 5px rgba(130, 130, 130, 0.3);
+    background-color: aqua;
+}
+
+.drop-down {
+    clear: both;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+ .drop-down ul, .drop-down li {
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+}
+.drop-down > ul {
+    text-align: center;
+}
+.drop-down li {
+    display: inline-block;
+    font-size:90%;
+    position: relative;
+    
+}
+.drop-down li:hover, .drop-down li:focus {
+    cursor: default;
+    position: relative;
+}
+/*transition for hover*/
+.drop-down li a:hover{
+    transition: all 0.2s linear 0s;
+}
+/*using inner block code for drop-down*/
+.drop-down li:hover > ul, .drop-down li:focus > ul {
+    display: block;
+}
+
+/*dropdown
+.navcontainer ul li.drop-down ul, .drop-down li {
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+}
+.drop-down {
+    clear: both;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+.drop-down > ul {
+    border-color: rgba(255, 255, 255, 0.35);
+    border-top: 1px solid rgba(255, 255, 255, 0.35);
+    text-align: center;
+}
+.drop-down li {
+    display: inline-block;
+    font-size: 120%;
+    padding: 0 15px;
+    position: relative;
+    z-index: 1;
+}
+.drop-down li:hover, .drop-down li:focus {
+    cursor: default;
+    position: relative;
+    z-index: 10;
+}
+.drop-down li ul {
+    background: none repeat scroll 0 0 rgba(255, 255, 255, 0.85);
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-shadow: 0 0 0 5px rgba(190, 190, 190, 0.35);
+    display: none;
+    left: 0;
+    opacity: 0;
+    padding: 7px;
+    position: absolute;
+    top: 100%;
+    width: 180px;
+    z-index: 0;
+}
+.drop-down li ul ul {
+    left: 155px;
+    top: 0;
+}
+.drop-down > ul > li:last-child > ul {
+    left: inherit;
+    right: 0;
+}
+.drop-down > ul > li:last-child > ul ul {
+    left: inherit;
+    right: 97%;
+}
+.drop-down li ul:hover {
+    background: none repeat scroll 0 0 rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 4px 5px rgba(130, 130, 130, 0.3);
+    transition: all 0.3s ease-in-out 0s;
+}
+.drop-down li li {
+    float: none;
+    font-size: 85%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.drop-down li li li {
+    font-size: 100%;
+}
+.drop-down li a, .drop-down li span.separator {
+    background-image: none;
+    border-top: 1px solid transparent;
+    color: #888;
+    display: block;
+    font-weight: normal;
+    padding: 12px 4px 12px 6px;
+    text-align: left;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out 0s;
+    word-wrap: break-word;
+}
+.drop-down li li a, .drop-down li li span.separator {
+    border-style: dashed none none;
+    border-top: 1px dashed #ddd;
+    display: block;
+    letter-spacing: 0;
+    margin: 0 3px;
+    padding: 9px 12px 8px;
+}
+.drop-down li li:first-child > a, .drop-down li li:first-child > span.separator {
+    border: medium none;
+}
+.drop-down li a:hover, .drop-down li span.separator:hover {
+    transition: all 0.2s linear 0s;
+}
+.drop-down li li li:first-child > a, .drop-down li li li:first-child > span {
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+}
+.drop-down li li:last-child > a, .drop-down li li:first-child > span {
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+}
+.drop-down li:hover > ul, .drop-down li:focus > ul {
+    display: block;
+    opacity: 1;
+    transition: all 0.4s ease-in-out 0s;
+    z-index: 10;
+}
+.drop-down a[href="#"] {
+    cursor: default;
+}
+.drop-down li.active > a, .drop-down li.active > span, .drop-down li:hover > a, .drop-down li:hover > span {
+    background: none repeat scroll 0 0 transparent;
+    border-top-color: #000;
+    color: #000;
+}
+.drop-down li li:hover > a, .drop-down li li.active > a, .drop-down li li.active > span {
+    border-top-color: #ddd;
+}
+.drop-down li li:hover a[href="#"] {
+    color: #666;
+}
+/*main-content*/
+.content-main{
+	height:100%;
+	width:100%;
+}
+
+.content-main .item1.square img {
+    height: 400px;
+    width: 80%;
+    border: 8px solid #fff;
+    position: relative;
+    box-shadow: -10px 20px 17px 8px rgba(0, 0, 0, 0.2), -4px -5px 4px 0 rgba(0, 0, 0, 0.2) inset, 2px 2px 3px 0 rgba(0, 0, 0, 0.2) inset;
+}
+.content-main .item1.square a.left{
+    bottom: 8px;
+    color: bisque;
+    font-size: 37px;
+    font-weight: bolder;
+    left: 0;
+    top: 336px;
+}
+.content-main .item1.square a.right{
+    bottom: 31px;
+    color: bisque;
+    font-size: 37px;
+    font-weight: bolder;
+    left: 745px;
+    top: 327px;
+}
+.carsoual .carousel-caption {
+	text-align:center;
+}
+.carsoual .carousel-indicators {
+	text-align:center;
+}
+/*second-content*/
+
+.content-secondary .left{
+	height:115px;
+	width:300px;
+	box-shadow:10px 10px 10px rgba(0.0.0.0.3);
+	background-color:green;
+	color:white;
+	
+}
+.content-secondary .center{
+	height:115px;
+	width:300px;
+	box-shadow:10px 10px 10px rgba(0.0.0.0.3);
+	background-color:#E8E8E8 ;
+	color:white;
+	
+}
+.content-secondary .right{
+	height:115px;
+	width:300px;
+	box-shadow:10px 10px 10px rgba(0.0.0.0.3);
+	background-color:green;
+	color:white;
+	
+}
+.content-secondary .left  h3{
+	line-height:32px;
+    font-weight:normal;
+    font-size:14px;
+}
+.content-secondary  .left  p{
+	text-indent: 6px;
+    font-weight: normal;
+    font-size: 13px;
+    text-align: center;
+}
+.content-secondary .left h3 {
+   border-color: rgba(255, 255, 255, 0.3);
+}
+.content-secondary .right  h3{
+	line-height:30px;
+    font-weight:normal;
+	font-size:14px;
+}
+
+.content-secondary  .right  p{
+	text-indent: 4px;
+    font-weight: normal;
+    font-size: 13px;
+    text-align: center;
+}
+.content-secondary .center  h3{
+    color: black;
+    line-height:31px;
+    font-weight:normal;
+    font-size:15px;
+}
+.content-secondary  .center  p{
+	text-indent: 3px;
+    font-weight: normal;
+    font-size: 13px;
+    text-align: center;
+    color:black;
+}
+/*footer*/
+/*footer up left */
+.footer .up_left{
+	color: black;
+    font-size: 10px;
+    font-weight: normal;
+    width: 50%;
+  
+}
+.footer .up_left a{
+	color:green;
+}
+.footer .up_left a:hover{
+	color:gray;
+}
+/*footer up right */
+.footer .up_right {
+	font-size: 10px;
+    font-weight: normal;
+    width: 50%;
+    
+}
+.footer .up_right  ul
+{
+	list-style-type: none;
+
+}
+
+.footer .up_right ul li { 
+	display: inline; 
+}
+
+.footer .up_right  ul li a
+{
+	text-decoration: none;
+	padding: .2em 1em;
+	color:gray;
+}
+
+.footer .up_right  ul li a:hover
+{
+	color:green;
+}
+
+/*footer up down_center */
+.footer .down_center {
+    color: black;
+    font-size: 15px;
+    font-weight: bolder;
+    width: 50%;
+    text-transform: uppercase;
+    font-style:normal;
+}
+
+.footer .down_center a.disabled {
+   pointer-events: none;
+   cursor: default;
+   color:ButtonHighlight;
+   
+
+}
+/*footer  down_right */
+.footer .down_right {
+    color: black;
+    font-size: 15px;
+    font-weight: normal;
+    width: 50%;
+}
+.footer .down_right ul {
+	color:gray;
+}
+
+.footer .down_right ul
+{
+	list-style-type: none;
+}
+
+.footer .down_right ul li { 
+	display: inline; 
+}
+
+.footer .down_right  ul li a {
+	text-decoration: none;
+	padding: .2em 1em;
+	color:black;
+	background-color:gray;
+	border-radius: 34px;
+}
+.footer .down_right  ul li a:hover {
+	color:green;
+}
+/*footer down_right up*/
+.footer .down_right_up {
+	font-weight: normal;
+    width: 10%;
+}
+.footer  .down_right_up  #toTop{
+	color: ButtonShadow;
+    display: inline;
+    font-size:20px;
+    background-color: gray;
+    border-radius: 35px;
+}
+.footer .down_right_up a:hover {
+	color:green;
+}
